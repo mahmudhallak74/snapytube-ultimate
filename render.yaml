@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: snapytube-ultimate
+    runtime: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.0
+    healthCheckPath: /api/health
